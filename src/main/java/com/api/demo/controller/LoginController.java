@@ -33,6 +33,9 @@ public class LoginController {
         }
         String pwd= Encryption.encryPwd(passwordTrim);
         ElecUser elecUser = elemUserService.queryUser(nameTrim, pwd);
+
+        System.out.println("hahahah");
+        System.out.println("hahahah");
         return elecUser==null?"/WEB-INF/menu/index.jsp":"/WEB-INF/menu/home.jsp";
     }
 }
